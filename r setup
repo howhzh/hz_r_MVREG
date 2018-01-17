@@ -1,0 +1,7 @@
+requirements <- c('data.table', 'zoo', 'knitr','lubridate', 'gridExtra','bit64','tidyr','parallel','DT', "dplyr", "lattice","speedglm","data.table","knitr","zoo","latticeExtra", "ggplot2", "gridExtra","grid","tidyr","DT", "readxl")
+
+for(requirement in requirements){if(!(requirement %in% installed.packages())) install.packages(requirement)}
+lapply(requirements, require, character.only=T)
+options(width=250)
+memory.limit(80000000) # increase virtue memory limit to avoid warning.
+set.seed(1234)
